@@ -1,1 +1,1 @@
-# a rock, paper, scissors experiment
+# the rock, paper, scissors
