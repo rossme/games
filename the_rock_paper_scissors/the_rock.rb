@@ -12,7 +12,7 @@ def game
   user_choice = user_answer.downcase
 
   you_lost = "=> You chose #{user_choice}, but I chose #{choice}. You lost!"
-  you_won = "=> You chose #{user_choice}, but I chose #{choice}. You won!"
+  you_won = "=> You chose #{user_choice}, and I chose #{choice}. You won!"
 
     if user_choice == "rock" && choice == "paper" ||
        user_choice == "paper" && choice == "scissors" ||
