@@ -7,20 +7,24 @@ def game
   user_answer = gets.chomp
   user_choice = user_answer.downcase
 
-  computer_choice = ['rock', 'paper', 'scissors']
-  choice = computer_choice.sample
+  hand = ['rock', 'paper', 'scissors']
+  choice = hand.sample
+
+  you_lost = "You chose #{user_choice}, but I chose #{choice}. You lost!"
+  you_won = "You chose #{user_choice}, but I chose #{choice}. You won!"
+
     if user_choice == "rock" && choice == "paper"
-      puts "You chose #{user_choice}, but I chose #{choice}. You lost!"
+      puts you_lost
     elsif user_choice == "rock" && choice == "scissors"
-      puts "You chose #{user_choice}, but I chose #{choice}. You win!"
+      puts you_won
     elsif user_choice == "paper" && choice == "scissors"
-      puts "You chose #{user_choice}, and I chose #{choice}. You lost!"
+      puts you_lost
     elsif user_choice == "paper" && choice == "rock"
-      puts "You chose #{user_choice}, and I chose #{choice}. *You win!*"
+      puts you_won
     elsif user_choice == "scissors" && choice == "rock"
-      puts "You chose #{user_choice}, but I chose #{choice}. You lost!"
+      puts you_lost
     elsif user_choice == "scissors" && choice == "paper"
-      puts "You chose #{user_choice}, and I chose #{choice}. *You win!*"
+      puts you_won
     elsif user_choice == choice
       puts "You chose #{user_choice} and I also chose #{choice}. It's a tie!"
     elsif user_choice == "the rock" && choice
@@ -31,11 +35,11 @@ def game
     end
     sleep(2)
     puts "=> Shall we play again? Y/N"
-    user_yes_no = gets.chomp
-    yes_no = user_yes_no.downcase
-    if yes_no == "y"
+    yes_no = gets.chomp
+    play_again = yes_no.downcase
+    if play_again == "y"
       run == true
-    elsif yes_no != "y" && yes_no != "n"
+    elsif play_again != "y" && play_again != "n"
       puts "Sorry I didn\'t understand, so let's play one more time!"
     else
       break
@@ -44,3 +48,4 @@ def game
 end
 
 game
+
