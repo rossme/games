@@ -1,2 +1,5 @@
-Trying out some simple game ideas.
-Rock, paper, scissors etc
+Simple terminal game ideas.
+Rock, Paper, Scissors...
+Black Jack...
+
+...more to follow
