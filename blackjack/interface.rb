@@ -9,7 +9,7 @@ while running
   answer = gets.chomp
   if %w[y yes].include?(answer)
     player_score += pick_player_card
-    puts state_of_the_game(player_score, bank_score)
+    puts state_of_play(player_score, bank_score)
     running = player_score < 21
   else
     running = false
